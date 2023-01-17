@@ -16,10 +16,10 @@ function App() {
       <div className="App">
         <Container>
           <Routes>
-            <Route path='/' component={Trending} exact/>
-            <Route path='/movie' component={Movies}/>
-            <Route path='/series' component={Series}/>
-            <Route path='/search' component={Search}/>
+            <Route exact path='/' element={Trending}/>
+            <Route exact path='/movie' element={Movies}/>
+            <Route exact path='/series' element={Series}/>
+            <Route exact path='/search' element={Search}/>
           </Routes>
         </Container>
       </div>
