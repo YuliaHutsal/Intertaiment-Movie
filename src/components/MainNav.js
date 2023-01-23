@@ -39,7 +39,7 @@ export default function SimpleBottomNavigation() {
 
 
   return (
-    <Box sx={{ width: 500 }}>
+    <Box sx={{ width: 500}}>
       <BottomNavigation
         showLabels
         value={value}
