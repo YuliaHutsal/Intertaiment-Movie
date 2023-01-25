@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { CustomPagination } from '../../components/Pagination/CustomPagination';
 import SingleContent from '../../components/SingleContent/SingleContent';
-import { Genres } from '../../components/SingleContent/Genres';
+import { Genres } from '../../components/Genres';
 
 const Movies = () => {
 
@@ -26,7 +26,7 @@ const Movies = () => {
     <div>
       <span className='pageTitle'>Movies</span>
       <Genres
-        type="media" 
+        type="movie" 
         selectedGenres={selectedGenres} 
         setSelectedGenres={setSelectedGenres}
         genres={genres} 
