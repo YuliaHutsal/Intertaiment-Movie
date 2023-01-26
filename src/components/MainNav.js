@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
@@ -18,28 +18,28 @@ export default function SimpleBottomNavigation() {
 
     if (value === 0) {
 
-        navigate('/')
+      navigate('/')
 
     } else if (value === 1) {
 
-        navigate('/movies')
+      navigate('/movies')
 
     } else if (value === 2) {
 
-        navigate('/tv-series')
+      navigate('/tv-series')
 
     } else if (value === 3) {
 
-        navigate('/search')
+      navigate('/search')
 
     }
 
-}, [value, navigate]);
-  
+  }, [value, navigate]);
+
 
 
   return (
-    <Box sx={{ width: 500}}>
+    <Box sx={{ width: 500 }}>
       <BottomNavigation
         showLabels
         value={value}
