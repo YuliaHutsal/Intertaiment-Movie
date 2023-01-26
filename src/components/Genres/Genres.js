@@ -25,8 +25,9 @@ export const Genres = ({
 
   const fetchGenres = async () => {
     const { data } = await axios.get(
+      // `https://api.themoviedb.org/3/genre//list?api_key=73a73dda6aef402ee87166dd70d8aa0d&language=en-US`
       `https://api.themoviedb.org/3/genre/${type}/list?api_key=73a73dda6aef402ee87166dd70d8aa0d&language=en-US`
-    );
+      );
     setGenres(data.genres)
   };
 
@@ -41,7 +42,7 @@ export const Genres = ({
 
   return (
     <div style={{ padding: "6px 0" }}>
-      {selectedGenres && selectedGenres.map((genre) => (
+      {selectedGenres.map((genre) => (
         <Chip
           label={genre.name}
           style={{ margin: 2 }}
@@ -52,10 +53,10 @@ export const Genres = ({
           onDelete={() => handleRemove(genre)}
         />
       ))}
-      {genres && genres.map((genre) => (
+      {genres.map((genre) => (
         <Chip
           label={genre.name}
-          style={{ margin: 2 }}
+          style={{ margin: 2, backgroundColor:"white", color:"black" }}
           size='small'
           key={genre.id}
           clickable
