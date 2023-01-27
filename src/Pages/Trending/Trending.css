@@ -3,3 +3,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.MuiBox-root .css-qxh7fn{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

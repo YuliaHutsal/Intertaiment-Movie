@@ -23,7 +23,7 @@ const Trending = () => {
       fetchTrending();
     },[page])
   return (
-    <div>
+    <div className='paginationTitle'>
       <span className='pageTitle'>Trending</span>
       <div className="trending">
         {content && content.map((c) =>(

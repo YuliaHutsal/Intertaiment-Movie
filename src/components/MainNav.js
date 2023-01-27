@@ -26,7 +26,7 @@ export default function SimpleBottomNavigation() {
 
     } else if (value === 2) {
 
-      navigate('/tv-series')
+      navigate('/series')
 
     } else if (value === 3) {
 
@@ -39,7 +39,7 @@ export default function SimpleBottomNavigation() {
 
 
   return (
-    <Box sx={{ width: 500 }}>
+    <Box>
       <BottomNavigation
         showLabels
         value={value}

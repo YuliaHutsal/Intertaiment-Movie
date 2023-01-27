@@ -21,14 +21,15 @@ export const Genres = ({
     setSelectedGenres(
       selectedGenres.filter((selected) => selected.id !== genre.id)
     )
+    setGenres([...genres, genre]);
+    setPage(1);
   }
 
   const fetchGenres = async () => {
     const { data } = await axios.get(
-      // `https://api.themoviedb.org/3/genre//list?api_key=73a73dda6aef402ee87166dd70d8aa0d&language=en-US`
-      `https://api.themoviedb.org/3/genre/${type}/list?api_key=73a73dda6aef402ee87166dd70d8aa0d&language=en-US`
+         `https://api.themoviedb.org/3/genre/${type}/list?api_key=73a73dda6aef402ee87166dd70d8aa0d&language=en-US`
       );
-    setGenres(data.genres)
+    setGenres(data.genres);
   };
 
   console.log(genres);
@@ -37,7 +38,7 @@ export const Genres = ({
     fetchGenres();
     return () => {
       setGenres([]);
-    }
+    };
   }, []);
 
   return (

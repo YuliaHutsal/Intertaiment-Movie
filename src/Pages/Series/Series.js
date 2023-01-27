@@ -1,5 +1,5 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { CustomPagination } from '../../components/Pagination/CustomPagination';
 import SingleContent from '../../components/SingleContent/SingleContent';
 import { Genres } from '../../components/Genres/Genres';
@@ -16,9 +16,12 @@ const Series = () => {
   const genreforURL = useGenres(selectedGenres);
 
   const fetchSeries = async () => {
-    const { data } = await axios.get("https://api.themoviedb.org/3/discover/tv?api_key=73a73dda6aef402ee87166dd70d8aa0d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}");
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/tv?api_key=73a73dda6aef402ee87166dd70d8aa0d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`
+      );
     setContent(data.results);
     setNumOfPages(data.total_pages);
+    console.log(data);
   };
 
   useEffect(() => {
@@ -26,12 +29,11 @@ const Series = () => {
     fetchSeries();
   }, [page, genreforURL]);
 
-  const Series = () => {
-    return (
+      return (
       <div>
         <span className='pageTitle'>Series</span>
         <Genres
-          type="tv "
+          type="tv"
           selectedGenres={selectedGenres}
           setSelectedGenres={setSelectedGenres}
           genres={genres}
@@ -58,5 +60,4 @@ const Series = () => {
       </div>
     );
   };
-}
 export default Series;

@@ -1,10 +1,8 @@
 .MuiBox-root .css-qxh7fn{
     position: fixed;
+    align-items: center;
     bottom: 0;
     background-color: #2d313a;
     z-index: 100;
 }
 
-.css-qxh7fn{
-    padding-left: 500px;
-}
