@@ -12,9 +12,7 @@ const Trending = () => {
     const[content, setContent] = useState([]);
 
     const fetchTrending = async()=>{
-        const{data} = await axios.get(
-            'https://api.themoviedb.org/3/trending/all/week?api_key=73a73dda6aef402ee87166dd70d8aa0d'
-        );
+        const{data} = await axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=73a73dda6aef402ee87166dd70d8aa0d`);
         // console.log(data.results);
         setContent(data.results);
     };
